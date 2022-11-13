@@ -1,0 +1,6 @@
+{
+  "host" : "162.55.212.105",
+  "port" : 3306,
+  "username" : "felix",
+  "database" : "GUI"
+}
