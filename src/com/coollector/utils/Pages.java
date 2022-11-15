@@ -15,19 +15,6 @@ public class Pages {
 
     public static String startPage;
 
-    public static void registerPage(String name, JPanel page) throws DuplicatePageName{
-        if (!pageNames.contains(name)){
-            pageNames.add(name);
-            pages.add(page);
-        } else {
-            try {
-                throw new RuntimeException();
-            } catch (RuntimeException e) {
-                throw new DuplicatePageName(" DuplicatedPageName : not two same page names. Duplicated name: " + name, e);
-            }
-        }
-    }
-
     public static void registerPage(String name, JPanel page, boolean isStartPage) throws TwoStartPages, DuplicatePageName{
         if (isStartPage) {
             if (!pageNames.contains(name)) {
@@ -40,7 +27,17 @@ public class Pages {
                 }
             }
         }
-        registerPage(name, page);
+
+        if (!pageNames.contains(name)){
+            pageNames.add(name);
+            pages.add(page);
+        } else {
+            try {
+                throw new RuntimeException();
+            } catch (RuntimeException e) {
+                throw new DuplicatePageName(" DuplicatedPageName : not two same page names. Duplicated name: " + name, e);
+            }
+        }
     }
 
 

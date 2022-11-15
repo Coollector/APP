@@ -5,11 +5,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import com.coollector.Main;
 import com.coollector.utils.Window;
 
 public class HomePage extends JPanel implements ActionListener {
-    public HomePage(Main main) {
+    public HomePage() {
         setPreferredSize(Window.windowSize);
         setBackground(Color.black);
     }

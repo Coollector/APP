@@ -42,12 +42,6 @@ public class Scene extends JPanel implements ActionListener {
         double number = Integer.parseInt(eingabe.getText());
         ergebnis = ergebnis + number + "\n";
         for (int i = 2; i < 10; i++) {
-            if (i == 9) {
-                System.out.println("nummer 9");
-                System.out.println(number);
-                System.out.println(number * 9);
-                System.out.println(number*i);
-            }
             number = number * i;
             ergebnis = ergebnis + number + "\n";
         }
